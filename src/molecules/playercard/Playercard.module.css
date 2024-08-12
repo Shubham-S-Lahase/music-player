@@ -64,6 +64,34 @@
   align-items: center;
 }
 
+.repeat{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repeat>img{
+  width: 70%;
+  height: 70%;
+}
+
+.repeatActive{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #480000;
+  border-radius: 50%;
+}
+
+.repeatActive>img{
+  width: 70%;
+  height: 70%;
+}
+
 .controls > img {
   width: 20px;
   height: 20px;

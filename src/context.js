@@ -12,12 +12,13 @@ export const MusicProvider = ({ children }) => {
   const [isRepeatOn, setRepeatOn] = useState(false);
 
   const playNextSong = () => {
-    if (isRepeatOn && !isShuffleOn) {
-      return;
-    }
-
-    if (isShuffleOn) {
-      const nextSongIndex = Math.floor(Math.random() * songs.length);
+    if (isRepeatOn) {
+      setCurrentSongIndex(currentSongIndex);
+    } else if (isShuffleOn) {
+      let nextSongIndex;
+      do {
+        nextSongIndex = Math.floor(Math.random() * songs.length);
+      } while (nextSongIndex === currentSongIndex);
       setCurrentSongIndex(nextSongIndex);
     } else {
       setCurrentSongIndex((prevIndex) =>
@@ -40,6 +41,24 @@ export const MusicProvider = ({ children }) => {
     setCurrentSongIndex(updatedList.findIndex(song => song.id === movedSong.id));
   };
 
+  const toggleRepeat = () => {
+    setRepeatOn(prevState => {
+      if (!prevState) {
+        setShuffleOn(false);
+      }
+      return !prevState;
+    });
+  };
+
+  const toggleShuffle = () => {
+    setShuffleOn(prevState => {
+      if (!prevState) {
+        setRepeatOn(false);
+      }
+      return !prevState;
+    });
+  }
+
   return (
     <MusicContext.Provider
       value={{
@@ -50,8 +69,10 @@ export const MusicProvider = ({ children }) => {
         playPreviousSong,
         moveSong,
         setSongs,
-        setShuffleOn,
-        setRepeatOn,
+        isShuffleOn,
+        toggleShuffle,
+        isRepeatOn,
+        toggleRepeat,
       }}
     >
       {children}
