@@ -1,0 +1,67 @@
+.App {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "sidenav mainarea";
+  width: 100%;
+  height: 100%;
+  background: #0E0E0E;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-left: 10%;
+}
+
+.mainarea {
+  grid-area: mainarea;
+  width: 100%;
+  height: 100vh;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.player{
+  width: 73%;
+  height: 100vh;
+  box-sizing: border-box;
+  background: url("../public/bg1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  padding-top: 1rem;
+  overflow-y: hidden;
+}
+
+.sidemore{
+  width: 27%;
+  height: 100vh;
+  box-sizing: border-box;
+  background: url("../public/bg2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}

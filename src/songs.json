@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "title": "Billie Jean",
+      "plays": "1,040,811,084",
+      "time": "4:53",
+      "album": "Thriller 25 Super Deluxe Edition",
+      "cover": "/billiejean.jpeg",
+      "mp3": "/BillieJean.mp3",
+      "isPlaying": true
+    },
+    {
+      "id": 2,
+      "title": "Beat It",
+      "plays": "643,786,045",
+      "time": "4:18",
+      "album": "Thriller 25 Super Deluxe Edition",
+      "cover": "/beatit.jpeg",
+      "mp3": "/BeatIt.mp3",
+      "isPlaying": false
+    },
+    {
+        "id": 3,
+        "title": "Smooth Criminal - 2012 Remaster",
+        "plays": "407,234,004",
+        "time": "4.17",
+        "album":"Thriller 25 Super Deluxe Edition",
+        "cover": "/smoothcriminal.jpg",
+        "mp3": "/SmoothCriminal.mp3",
+        "isPlaying": false
+    },
+    {
+        "id": 4,
+        "title": "Don't Stop Til You Get Enough",
+        "plays": "316,391,952",
+        "time": "6.05",
+        "album":"Bad 25th Anniversary Edition",
+        "cover": "dsityge.jpg",
+        "mp3": "DonStopTillYouGetEnough.mp3",
+        "isPlaying": false
+    },
+    {
+        "id": 5,
+        "title": "Rock With You - Single Version",
+        "plays": "268,187,218",
+        "time": "3:40",
+        "album":"Off The Wall Studi0 Album",
+        "cover": "/rockwyou.jpeg",
+        "mp3": "/RockWithYou.mp3",
+        "isPlaying": false
+    }
+  ]
+  

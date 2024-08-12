@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.appName {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.appName > img {
+  width: 15%;
+  cursor: pointer;
+}
+
+.appName > h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1.25rem, 1.786vw + 0.107rem, 2.25rem);
+  line-height: normal;
+  margin: 0;
+  cursor: pointer;
+}
+
+.appName > h1 > span {
+  color: #ff5353;
+  font-weight: 500;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 20%;
+}
+
+.menu > h4 {
+  color: #ebd2d2;
+  line-height: normal;
+  font-size: clamp(0.875rem, 0.446vw + 0.589rem, 1.125rem);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.menuItem {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.menuItem > img {
+  width: 7%;
+}
+
+.menuItem > h3 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #ebd2d2;
+  line-height: normal;
+  font-size: clamp(0.875rem, 0.25vw + 0.825rem, 1.125rem);
+  cursor: pointer;
+}
+
+#general{
+    margin-top: 95%;
+}

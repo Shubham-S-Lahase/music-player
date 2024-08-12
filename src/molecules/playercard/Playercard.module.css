@@ -1,0 +1,108 @@
+.playerCard {
+  width: 90%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #6b0000;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin-bottom: 3%;
+}
+
+.playerCard > span {
+  color: #f6f6f6;
+  font-size: clamp(0.688rem, 0.335vw + 0.473rem, 0.875rem);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.playerCard > input {
+  width: 100%;
+}
+
+.playerCard > input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #f6f6f6;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.playerCard > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: #6b0000;
+  border: 2px solid #f6f6f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.playerCard > input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: #6b0000;
+  border: 2px solid #f6f6f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.controls > img {
+  width: 20px;
+  height: 20px;
+}
+
+#ncontrol {
+  width: 35px;
+  height: 35px;
+}
+
+.songDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.songDetails img {
+  width: 80%;
+  height: 90%;
+}
+
+.songDetails h4 {
+  margin: 0;
+  font-size: clamp(0.875rem, 0.446vw + 0.589rem, 1.125rem);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #f6f6f6;
+  text-align: center;
+}
+
+.songDetails p {
+  margin: 0;
+  font-size: clamp(0.688rem, 0.335vw + 0.473rem, 0.875rem);
+  color: #cfc5c5;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}

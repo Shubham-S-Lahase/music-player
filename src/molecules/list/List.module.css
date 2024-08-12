@@ -1,0 +1,114 @@
+.musicListContainer {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  font-size: clamp(0.875rem, 0.446vw + 0.589rem, 1.125rem);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.musicListHeader {
+  width: 100%;
+  border-left: 7px solid transparent;
+  box-sizing: border-box;
+}
+
+.innerh {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.4fr 0.7fr 2.3fr 1fr 1fr 2fr;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.musicListBody {
+  max-height: calc(100% - 47px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+.musicListBody::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.musicListBody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.musicListBody::-webkit-scrollbar-thumb {
+  background-color: wheat;
+  border-radius: 20px;
+}
+
+.musicListBody::-webkit-scrollbar {
+  width: 3px;
+}
+
+.musicListItem {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  border-left: 7px solid transparent;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.4fr 0.7fr 2.3fr 1fr 1fr 2fr;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+}
+
+.active {
+  background-color: #750000;
+  color: white;
+  border-left: 7px solid #ca0000;
+}
+
+.musicListItem div {
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.musicListHeader div {
+  padding: 5px;
+}
+
+#coverCont {
+  width: 30%;
+  height: 30px;
+  margin-left: 0.5rem;
+}
+
+#coverCont>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playingIcon {
+  width: 100%;
+}
+
+.draggable {
+  transition: transform 0.2s ease-in-out;
+}
