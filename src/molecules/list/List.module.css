@@ -39,7 +39,7 @@
 }
 
 .musicListBody {
-  max-height: calc(100% - 47px);
+  max-height: calc(100% - 70px);
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-gutter: stable;
