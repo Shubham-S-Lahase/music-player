@@ -9,6 +9,7 @@
 .appName {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .appName > img {
@@ -74,6 +75,20 @@
   cursor: pointer;
 }
 
-#general{
-    margin-top: 95%;
+#general {
+  margin-top: 95%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu > h4 {
+    font-size: 18px;
+  }
+
+  .menuItem>h3{
+    font-size: 18px;
+  }
+  .menuItem > img {
+    width: 20px;
+    height: 20px;
+  }
 }
