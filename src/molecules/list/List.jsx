@@ -3,10 +3,12 @@ import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { useMusic } from "../../context";
 import st from "./List.module.css";
+import Playercard from "../playercard/Playercard";
 
 const List = () => {
   const { songs, setSongs, currentSongIndex, setCurrentSongIndex } = useMusic();
   const [selectedSong, setSelectedSong] = useState(songs[currentSongIndex]?.id);
+  const [isPlayercardVisible, setIsPlayercardVisible] = useState(false);
 
   useEffect(() => {
     setSelectedSong(songs[currentSongIndex]?.id);
@@ -16,6 +18,9 @@ const List = () => {
     const songIndex = songs.findIndex((song) => song.id === id);
     setCurrentSongIndex(songIndex);
     setSelectedSong(id);
+    if (window.innerWidth < 700) {
+      setIsPlayercardVisible(true);
+    }
   };
 
   const moveSong = (fromIndex, toIndex) => {
@@ -25,7 +30,6 @@ const List = () => {
     setSongs(updatedList);
   };
 
-  // The ListItem component remains within the scope of List
   const ListItem = ({ song, index }) => {
     const [, ref] = useDrag({
       type: "SONG",
@@ -96,6 +100,13 @@ const List = () => {
             <ListItem key={song.id} song={song} index={index} />
           ))}
         </div>
+        {isPlayercardVisible && (
+          <div className={st.contcn}>
+            <div className={st.cardCont}>
+              <Playercard />
+            </div>
+          </div>
+        )}
       </div>
     </DndProvider>
   );

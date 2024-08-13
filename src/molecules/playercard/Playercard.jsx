@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useMusic } from "../../context";
 import st from "./Playercard.module.css";
 
-const Playercard = () => {
+const Playercard = ({ onClose }) => {
   const {
     songs,
     currentSongIndex,

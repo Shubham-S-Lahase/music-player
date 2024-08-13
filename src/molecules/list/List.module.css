@@ -120,3 +120,36 @@
 .draggable {
   transition: transform 0.2s ease-in-out;
 }
+
+.cardCont{
+  display: none;
+}
+
+.contcn{
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  .contcn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardCont{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    position: absolute;
+    top: 400PX;
+    margin-left: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .cardCont{
+    left: 10px;
+  }
+}

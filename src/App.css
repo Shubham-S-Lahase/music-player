@@ -134,3 +134,12 @@
   display: none;
 }
 
+@media (max-width: 700px) {
+  .player{
+    width: 100%;
+  }
+  .sidemore{
+    width: 0%;
+    display: none;
+  }
+}

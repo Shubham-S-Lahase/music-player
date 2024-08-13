@@ -111,3 +111,21 @@
     margin-left: 10%;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .topnav{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .labs{
+    width: 80%;
+    justify-content: space-between;
+  }
+  .searchbar{
+    width: 80%;
+  }
+}
