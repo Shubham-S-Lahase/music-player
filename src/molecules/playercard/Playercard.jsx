@@ -42,6 +42,7 @@ const Playercard = () => {
     });
 
     if (isPlaying) {
+      // audio.currentTime = currentTime;
       audio.play();
     } else {
       audio.pause();
@@ -69,13 +70,6 @@ const Playercard = () => {
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
-
-  // const shuffleSongs = () => {
-  //   const shuffledSongs = [...songs].sort(() => Math.random() - 0.5);
-  //   setSongs(shuffledSongs);
-  //   setCurrentSongIndex(0);
-  //   setIsPlaying(true);
-  // };
 
   return (
     <div className={st.playerCard}>

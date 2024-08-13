@@ -15,6 +15,14 @@
   box-sizing: border-box;
 }
 
+.headsb{
+  width: 90%;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  color: #CFC5C5;
+}
+
 .innerh {
   width: 90%;
   margin: auto;
@@ -24,7 +32,7 @@
   text-align: left;
   padding: 10px;
   background-color: transparent;
-  color: white;
+  color: #CFC5C5;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -62,6 +70,7 @@
   display: flex;
   align-items: center;
   border-left: 7px solid transparent;
+  color: #CFC5C5;
 }
 
 .inner {
@@ -71,14 +80,13 @@
   grid-template-columns: 0.4fr 0.7fr 2.3fr 1fr 1fr 2fr;
   padding: 10px;
   background-color: transparent;
-  color: white;
   cursor: pointer;
   align-items: center;
 }
 
 .active {
   background-color: #750000;
-  color: white;
+  color: #ffffff !important;
   border-left: 7px solid #ca0000;
 }
 

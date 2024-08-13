@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { DndProvider, useDrag, useDrop } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import { DndProvider, useDrag, useDrop } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 import { useMusic } from "../../context";
 import st from "./List.module.css";
 
@@ -13,7 +13,7 @@ const List = () => {
   }, [currentSongIndex, songs]);
 
   const handleClick = (id) => {
-    const songIndex = songs.findIndex(song => song.id === id);
+    const songIndex = songs.findIndex((song) => song.id === id);
     setCurrentSongIndex(songIndex);
     setSelectedSong(id);
   };
@@ -28,12 +28,12 @@ const List = () => {
   // The ListItem component remains within the scope of List
   const ListItem = ({ song, index }) => {
     const [, ref] = useDrag({
-      type: 'SONG',
+      type: "SONG",
       item: { index },
     });
 
     const [, drop] = useDrop({
-      accept: 'SONG',
+      accept: "SONG",
       hover: (item) => {
         if (item.index !== index) {
           moveSong(item.index, index);
@@ -78,6 +78,10 @@ const List = () => {
     <DndProvider backend={HTML5Backend}>
       <div className={st.musicListContainer}>
         <div className={st.musicListHeader}>
+          <div className={st.headsb}>
+            <span>Popular</span>
+            <span>See All</span>
+          </div>
           <div className={st.innerh}>
             <div style={{ display: "flex", justifyContent: "center" }}>#</div>
             <div></div>
@@ -89,11 +93,7 @@ const List = () => {
         </div>
         <div className={st.musicListBody}>
           {songs.map((song, index) => (
-            <ListItem
-              key={song.id}
-              song={song}
-              index={index}
-            />
+            <ListItem key={song.id} song={song} index={index} />
           ))}
         </div>
       </div>

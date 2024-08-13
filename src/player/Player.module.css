@@ -88,3 +88,21 @@
   justify-content: center;
   overflow: hidden;
 }
+
+@media only screen and (max-width: 1300px) {
+  .topnav {
+    gap: 25%;
+  }
+
+  .labs{
+    gap: 10%;
+  }
+
+  .searchbar{
+    width: 30%;
+  }
+
+  .searchbar input{
+    width: 80%;
+  }
+}
